@@ -1,0 +1,114 @@
+[
+    {
+        "model": "chilestay.Region",
+        "pk": 1,
+        "fields": {
+            "name": "Arica y Parinacota"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 2,
+        "fields": {
+            "name": "Tarapacá"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 3,
+        "fields": {
+            "name": "Antofagasta"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 4,
+        "fields": {
+            "name": "Atacama"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 5,
+        "fields": {
+            "name": "Coquimbo"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 6,
+        "fields": {
+            "name": "Valparaíso"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 7,
+        "fields": {
+            "name": "Región del Libertador Gral. Bernardo O’Higgins"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 8,
+        "fields": {
+            "name": "Región del Maule"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 9,
+        "fields": {
+            "name": "Región de Ñuble"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 10,
+        "fields": {
+            "name": "Región del Biobío"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 11,
+        "fields": {
+            "name": "Región de la Araucanía"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 12,
+        "fields": {
+            "name": "Región de Los Ríos"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 13,
+        "fields": {
+            "name": "Región de Los Lagos"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 14,
+        "fields": {
+            "name": "Región Aisén del Gral. Carlos Ibáñez del Campo"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 15,
+        "fields": {
+            "name": "Región de Magallanes y de la Antártica Chilena"
+        }
+    },
+    {
+        "model": "chilestay.Region",
+        "pk": 16,
+        "fields": {
+            "name": "Región Metropolitana de Santiago"
+        }
+    }
+]

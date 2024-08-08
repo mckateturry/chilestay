@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ inmueble.nombre }}</h2>
+    <p><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+    <p><strong>Comuna:</strong> {{ inmueble.comuna }}</p>
+    <p><strong>Región:</strong> {{ inmueble.region }}</p>
+    <p><strong>Tipo:</strong> {{ inmueble.tipo_inmueble }}</p>
+    <p><strong>Capacidad:</strong> {{ inmueble.capacidad_adultos }} adultos</p>
+    <p><strong>Fecha Disponible Desde:</strong> {{ inmueble.fecha_disponible_desde }}</p>
+    <p><strong>Fecha Disponible Hasta:</strong> {{ inmueble.fecha_disponible_hasta }}</p>
+    <p><strong>Descripción:</strong> {{ inmueble.descripcion }}</p>
+    <a href="{% url 'inmueble_list' %}" class="btn btn-secondary">Volver a la lista</a>
+</div>
+{% endblock %}

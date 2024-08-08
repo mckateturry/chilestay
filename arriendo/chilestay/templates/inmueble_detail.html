@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="mb-4">{{ inmueble.nombre }}</h2>
+            <p><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+            <p><strong>Comuna:</strong> {{ inmueble.comuna }}</p>
+            <p><strong>Región:</strong> {{ inmueble.region }}</p>
+            <p><strong>Tipo:</strong> {{ inmueble.tipo_inmueble }}</p>
+            <p><strong>Capacidad:</strong> {{ inmueble.capacidad_adultos }} adultos</p>
+            <p><strong>Fecha Disponible Desde:</strong> {{ inmueble.fecha_disponible_desde }}</p>
+            <p><strong>Fecha Disponible Hasta:</strong> {{ inmueble.fecha_disponible_hasta }}</p>
+            <div class="description-class">
+                <p><strong>Descripción:</strong> {{ inmueble.descripcion }}</p>
+            </div>
+            <a href="{% url 'inmueble_list' %}" class="btn btn-secondary mt-4">Volver a la lista</a>
+        </div>
+        <div class="col-md-4">
+            {% if inmueble.foto %}
+            <img src="{{ inmueble.foto.url }}" class="img-fluid rounded" alt="Imagen de {{ inmueble.nombre }}">
+            {% else %}
+            <img src="{% static 'assets/img/default_image.jpg' %}" class="img-fluid rounded" alt="Imagen por defecto">
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-0 rounded-lg shadow-lg">
+                <div class="card-header text-center bg-white border-bottom">
+                    <h3 class="font-weight-bold text-primary">Registrar Inmueble</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        <div class="mb-4">
+                            <label for="id_nombre" class="form-label">Nombre del Inmueble</label>
+                            {{ form.nombre|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_direccion" class="form-label">Dirección</label>
+                            {{ form.direccion|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_comuna" class="form-label">Comuna</label>
+                            {{ form.comuna|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_region" class="form-label">Región</label>
+                            {{ form.region|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_tipo_inmueble" class="form-label">Tipo de Inmueble</label>
+                            {{ form.tipo_inmueble|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_capacidad_adultos" class="form-label">Capacidad de Adultos</label>
+                            {{ form.capacidad_adultos|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_fecha_disponible_desde" class="form-label">Fecha Disponible Desde</label>
+                            {{ form.fecha_disponible_desde|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_fecha_disponible_hasta" class="form-label">Fecha Disponible Hasta</label>
+                            {{ form.fecha_disponible_hasta|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_descripcion" class="form-label">Descripción</label>
+                            {{ form.descripcion|add_class:"form-control" }}
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_foto" class="form-label">Subir Foto</label>
+                            {{ form.foto|add_class:"form-control-file" }}
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Registrar</button>
+                            <a href="{% url 'inmueble_list' %}" class="btn btn-outline-secondary btn-lg ms-2">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} {% endcomment %}
+

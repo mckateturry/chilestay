@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">Buscar Inmuebles</h2>
+
+    <form id="filter-form" method="GET" action="{% url 'index' %}">
+        <div class="row">
+            <!-- Zona -->
+            <div class="col-md-3 mb-3">
+                <label for="zona" class="form-label">Zona</label>
+                <select id="zona" name="zona" class="form-select">
+                    <option value="">Seleccionar Zona</option>
+                    <option value="norte" {% if request.GET.zona == 'norte' %}selected{% endif %}>Zona Norte</option>
+                    <option value="centro" {% if request.GET.zona == 'centro' %}selected{% endif %}>Zona Centro</option>
+                    <option value="sur" {% if request.GET.zona == 'sur' %}selected{% endif %}>Zona Sur</option>
+                    <option value="austral" {% if request.GET.zona == 'austral' %}selected{% endif %}>Zona Austral</option>
+                </select>
+            </div>
+
+            <!-- Llegada -->
+            <div class="col-md-3 mb-3">
+                <label for="llegada" class="form-label">Llegada</label>
+                <input type="text" id="llegada" name="llegada" class="form-control" placeholder="Seleccionar fecha" value="{{ request.GET.llegada }}">
+            </div>
+
+            <!-- Salida -->
+            <div class="col-md-3 mb-3">
+                <label for="salida" class="form-label">Salida</label>
+                <input type="text" id="salida" name="salida" class="form-control" placeholder="Seleccionar fecha" value="{{ request.GET.salida }}">
+            </div>
+
+            <!-- Quién -->
+            <div class="col-md-3 mb-3">
+                <label for="adultos" class="form-label">Adultos</label>
+                <div class="d-flex align-items-center">
+                    <input type="number" id="adultos" name="adultos" class="form-control me-2" min="0" value="{{ request.GET.adultos|default:0 }}">
+                    <button type="button" id="increase-adults" class="btn btn-outline-secondary">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
+
+    <div class="row mt-5">
+        {% if inmuebles %}
+            {% for inmueble in inmuebles %}
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 rounded-lg shadow-sm">
+                    <img src="{% if inmueble.foto %}{{ inmueble.foto.url }}{% else %}{% static 'assets/img/default_image.jpg' %}{% endif %}" class="card-img-top" alt="{{ inmueble.nombre }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                        <p class="card-text"><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+                        <p class="card-text"><strong>Comuna:</strong> {{ inmueble.comuna }}</p>
+                        <p class="card-text"><strong>Región:</strong> {{ inmueble.region }}</p>
+                        <a href="{% url 'inmueble_detail' inmueble.id %}" class="btn btn-primary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center">No se encontraron inmuebles que coincidan con los filtros.</p>
+            {% endfor %}
+        {% else %}
+        <p class="text-center">No hay inmuebles disponibles.</p>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Flatpickr CSS and JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        flatpickr("#llegada", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+        });
+        flatpickr("#salida", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+        });
+
+        document.getElementById('increase-adults').addEventListener('click', function() {
+            var adultosInput = document.getElementById('adultos');
+            adultosInput.value = parseInt(adultosInput.value) + 1;
+        });
+    });
+</script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmuebles Disponibles</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" 
+            integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function filtrarComunas(regionId) {
+            if (!regionId) {
+                document.getElementById('comuna').innerHTML = '<option value="">Todas las comunas</option>';
+                return;
+            }
+
+            axios.post('/filtrar-comunas/', { regionId: regionId })
+                .then(response => {
+                    if (response.data.status === 200) {
+                        const comunas = response.data.data;
+                        let options = '<option value="">Todas las comunas</option>';
+                        comunas.forEach(comuna => {
+                            options += `<option value="${comuna.id}">${comuna.name}</option>`;
+                        });
+                        document.getElementById('comuna').innerHTML = options;
+                    } else {
+                        console.error('Error:', response.data);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al filtrar comunas:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container my-4">
+        <h2>Inmuebles Disponibles</h2>
+        <form method="GET" class="mb-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="region">Región</label>
+                    <select name="region" id="region" class="form-control" onchange="filtrarComunas(this.value)">
+                        <option value="">Todas las regiones</option>
+                        {% for region in regiones %}
+                        <option value="{{ region.id }}" {% if request.GET.region == region.id|stringformat:'s' %}selected{% endif %}>{{ region.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="comuna">Comuna</label>
+                    <select name="comuna" id="comuna" class="form-control">
+                        <option value="">Todas las comunas</option>
+                        {% for comuna in comunas %}
+                        <option value="{{ comuna.id }}" {% if request.GET.comuna == comuna.id|stringformat:'s' %}selected{% endif %}>{{ comuna.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary mt-4">Filtrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+{% endblock %} {% endcomment %}

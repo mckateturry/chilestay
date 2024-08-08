@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+ {% comment %} <!--FRASE1-->
+ 
+ <div class="py-5 px-5">
+    <h2 class="slideRight text-center">¿Listo para la acción {{ user.username }}?</h2>
+  </div> {% endcomment %}
+
+
+
+  {% block content %}
+  <div class="py-5 px-5">
+    <h2 class="slideRight text-center">¿Listo para la acción, {{ user.username }}?</h2>
+  </div> 
+  <div class="container my-5">
+      <h2 class="text-center">Panel de Anfitrión</h2>
+  
+      <div class="row mt-4">
+          <!-- Crear y editar listados -->
+          <div class="col-md-6 mb-4">
+              <div class="card">
+                  <div class="card-header">
+                      <h4>Crear y editar listados</h4>
+                  </div>
+                  <div class="card-body">
+                      <a href="{% url 'registro_inmueble' %}" class="btn btn-primary">Crear nuevo listado</a>
+                      <a href="{% url 'inmueble_list' %}" class="btn btn-secondary">Editar listados</a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Calendario de disponibilidad -->
+          <div class="col-md-6 mb-4">
+              <div class="card">
+                  <div class="card-header">
+                      <h4>Calendario de disponibilidad</h4>
+                  </div>
+                  <div class="card-body">
+                      <a href="{% url 'calendario' %}" class="btn btn-primary">Ver calendario</a>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Mensajes de huéspedes -->
+          <div class="col-md-6 mb-4">
+              <div class="card">
+                  <div class="card-header">
+                      <h4>Mensajes de huéspedes</h4>
+                  </div>
+                  <div class="card-body">
+                      <a href="{% url 'mensajes' %}" class="btn btn-primary">Ver mensajes</a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Historial de reservas -->
+          <div class="col-md-6 mb-4">
+              <div class="card">
+                  <div class="card-header">
+                      <h4>Historial de reservas</h4>
+                  </div>
+                  <div class="card-body">
+                      <a href="{% url 'reservaciones' %}" class="btn btn-primary">Ver historial de reservas</a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Estadísticas y rendimiento -->
+          <div class="col-md-6 mb-4">
+              <div class="card">
+                  <div class="card-header">
+                      <h4>Estadísticas y rendimiento</h4>
+                  </div>
+                  <div class="card-body">
+                      <a href="{% url 'estadisticas' %}" class="btn btn-primary">Ver estadísticas</a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Solicitar certificación SERNATUR -->
+          <div class="col-md-6 mb-4">
+              <div class="card">
+                  <div class="card-header">
+                      <h4>Solicitar certificación SERNATUR</h4>
+                  </div>
+                  <div class="card-body">
+                      <a href="{% url 'solicitar_certificacion' %}" class="btn btn-primary">Solicitar certificación</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  {% endblock %}
+  

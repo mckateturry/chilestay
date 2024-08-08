@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    {% if user.is_authenticated %}
+        <div class="jumbotron text-center">
+            <h1 class="display-4">¡Bienvenid@, {{ user.username }}!</h1>
+            <p class="lead">
+                {% if user.usuario.tipo_usuario == 'arrendador' %}
+                    Como arrendador, puedes agregar nuevos inmuebles o modificar los actuales. También puedes gestionar las solicitudes de arriendo.
+                {% elif user.usuario.tipo_usuario == 'arrendatario' %}
+                    Como arrendatario... ¡ya puedes comenzar a buscar un inmueble!
+                {% endif %}
+            </p>
+            <hr class="my-4">
+            {% if user.usuario.tipo_usuario == 'arrendador' %}
+                <a class="btn btn-primary" href="{% url 'agregar_inmueble' %}" type="button">Agregar nuevos inmuebles</a>
+                <a class="btn btn-secondary" href="{% url 'mis_inmuebles' %}" type="button">Ver todos los inmuebles</a>
+                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                    <a class="btn btn-tertiary btn-lg" href="{% url 'listar_solicitudes_arriendo' %}" type="button">Ver Solicitudes de Arriendo</a>
+                </div>
+            {% elif user.usuario.tipo_usuario == 'arrendatario' %}
+                <a class="btn btn-primary btn-lg" href="{% url 'listar_inmuebles' %}" type="button">Buscar inmuebles</a>
+                <a class="btn btn-secondary btn-lg" href="{% url 'profile' %}" type="button">Ver tu perfil</a>
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="jumbotron text-center">
+            <h1 class="display-4">¡Bienvenido a tu sitio web de Gestión de Inmuebles!</h1>
+            <p class="lead">Para comenzar, <a class="btn btn-primary" href="{% url 'login' %}" type="button">Inicia Sesión</a> para acceder a todas las funcionalidades.</p>
+            <hr class="my-4">
+            <p>Si aún no tienes una cuenta, ¿qué esperas?</p>
+            <a class="btn btn-secondary btn-lg" href="{% url 'register' %}" type="button">REGÍSTRATE AQUÍ</a>
+        </div>
+    {% endif %}
+    <!--CARDS-->
+ <div class="container px-5 py-5">
+    <!--row 1-->
+    <div class="row">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div class="card">
+          <img src="assets/img/cupon-1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title fw-light">
+              Plumón Coral Fleece estampado en modelo y tamaño a elección
+            </h3>
+            <div class="py-3">
+            <h5 class="fw-light">Plumones Manolino</h5>
+            <p class="card-text">
+              <i class="fa-solid fa-location-dot"></i>
+              9191 Avenida Vitacura, Chile
+            </p>
+          </div>
+          <hr>
+          </div>
+          <div class="card-body d-flex ms-auto mb-2 mb-lg-0 py-1">
+            <p class="antes px-3">$45.990</p>
+            <p class="ahora fw-bold fs-4">$22.990</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card">
+            <img src="assets/img/cupon-2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3 class="card-title fw-light">
+                  Entrada para compartir + platos de fondo + postres + bebestibles
+              </h3>
+              <div class="py-3">
+              <h5 class="fw-light">V for Vegan</h5>
+              <p class="card-text">
+                <i class="fa-solid fa-location-dot"></i>
+                777 Jesse Pinkman, Chile
+              </p>
+            </div>
+            <hr>
+            </div>
+            <div class="card-body d-flex ms-auto mb-2 mb-lg-0 py-1">
+              <p class="antes px-3">$30.990</p>
+              <p class="ahora fw-bold fs-4">$12.990</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card">
+            <img src="assets/img/cupon-3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3 class="card-title fw-light">
+                  Evaluación integral + blanqueamiento dental led + limpieza + fluoración
+              </h3>
+              <div class="py-3">
+              <h5 class="fw-light">Clínica Dental Quijada</h5>
+              <p class="card-text">
+                <i class="fa-solid fa-location-dot"></i>
+                1342, Blanco Encalada, Chile
+              </p>
+            </div>
+            <hr>
+            </div>
+            <div class="card-body d-flex ms-auto mb-2 mb-lg-0 py-1">
+              <p class="antes px-3">$300.000</p>
+              <p class="ahora fw-bold fs-4">$25.990</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+    <!--row 2-->
+    <div class="row">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div class="card">
+          <img src="assets/img/cupon-4.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title fw-light">
+              Colación para 2 personas + postre (no incluye bebidas)
+            </h3>
+            <div class="py-3">
+            <h5 class="fw-light">Suricata almacen</h5>
+            <p class="card-text">
+              <i class="fa-solid fa-location-dot"></i>
+              1071 Miguel Claro, Chile
+            </p>
+          </div>
+          <hr>
+          </div>
+          <div class="card-body d-flex ms-auto mb-2 mb-lg-0 py-1">
+            <p class="antes px-3">$4.200</p>
+            <p class="ahora fw-bold fs-4">$2.100</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card">
+            <img src="assets/img/cupon-5.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3 class="card-title fw-light">
+                  1, 2 o 4 tickets para Stukids. Elige sucursal
+              </h3>
+              <div class="py-3">
+              <h5 class="fw-light">Stukids Centro de Eventos</h5>
+              <p class="card-text">
+                <i class="fa-solid fa-location-dot"></i>
+                133 El tranque, Chile
+              </p>
+            </div>
+            <hr>
+            </div>
+            <div class="card-body d-flex ms-auto mb-2 mb-lg-0 py-1">
+              <p class="antes px-3">$4.000</p>
+              <p class="ahora fw-bold fs-4">$2.500</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card">
+            <img src="assets/img/cupon-6.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3 class="card-title fw-light">
+                  1 o 2 noches en alojamiento a elección
+              </h3>
+              <div class="py-3">
+              <h5 class="fw-light">D-Latam Travel</h5>
+              <p class="card-text">
+                <i class="fa-solid fa-location-dot"></i>
+                San Pedro de Atacama
+              </p>
+            </div>
+            <hr>
+            </div>
+            <div class="card-body d-flex ms-auto mb-2 mb-lg-0 py-1">
+              <p class="antes px-3">$80.200</p>
+              <p class="ahora fw-bold fs-4">$44.100</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+  
+  </div>
+</div>
+{% endblock %}

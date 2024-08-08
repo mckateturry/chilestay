@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <!--FRASE1-->
+ 
+ <div class="py-5 px-5">
+    <h2 class="slideRight text-center">¿Listo para la acción {{ user.username }}?</h2>
+  </div>
+
+  <a href="{% url 'registro_inmueble' %}">Registrar Inmueble</a>
+
+{% endblock %}

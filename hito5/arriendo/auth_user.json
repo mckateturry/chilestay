@@ -1,0 +1,404 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "Davinci354",
+            "last_login": "2024-07-20T19:42:00Z",
+            "is_superuser": true,
+            "username": "crisa",
+            "first_name": "",
+            "last_name": "",
+            "email": "c@m.cl",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-07-12T00:09:32Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "password": "R3dH0tChil1",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user07",
+            "first_name": "José",
+            "last_name": "Pérez",
+            "email": "jose.perez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:40:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 8,
+        "fields": {
+            "password": "OceanBreeze9&",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user08",
+            "first_name": "Ana",
+            "last_name": "Fernández",
+            "email": "ana.fernandez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:41:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 9,
+        "fields": {
+            "password": "M@rketP@ss99",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user09",
+            "first_name": "Luis",
+            "last_name": "Gómez",
+            "email": "luis.gomez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:42:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 10,
+        "fields": {
+            "password": "TrendyShoe$12",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user10",
+            "first_name": "Marta",
+            "last_name": "Cruz",
+            "email": "marta.cruz@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:43:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 11,
+        "fields": {
+            "password": "Sunshine8*Day",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user11",
+            "first_name": "Ricardo",
+            "last_name": "Morales",
+            "email": "ricardo.morales@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:44:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 12,
+        "fields": {
+            "password": "WiLdM0untain!",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user12",
+            "first_name": "Laura",
+            "last_name": "Rivas",
+            "email": "laura.rivas@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:45:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 13,
+        "fields": {
+            "password": "ChocoL@te24",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user13",
+            "first_name": "Jorge",
+            "last_name": "Silva",
+            "email": "jorge.silva@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:46:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 14,
+        "fields": {
+            "password": "R3liableP@ss",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user14",
+            "first_name": "Carmen",
+            "last_name": "Hernández",
+            "email": "carmen.hernandez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:47:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 15,
+        "fields": {
+            "password": "F1shing!2024",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user15",
+            "first_name": "Antonio",
+            "last_name": "Gutiérrez",
+            "email": "antonio.gutierrez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:48:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 16,
+        "fields": {
+            "password": "4EverYoung!",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user16",
+            "first_name": "Patricia",
+            "last_name": "Muñoz",
+            "email": "patricia.munoz@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:49:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 17,
+        "fields": {
+            "password": "Music!L0vers",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user17",
+            "first_name": "Pedro",
+            "last_name": "Arias",
+            "email": "pedro.arias@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:50:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 18,
+        "fields": {
+            "password": "J@zzing4Fun",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user18",
+            "first_name": "Elena",
+            "last_name": "Castro",
+            "email": "elena.castro@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:51:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 19,
+        "fields": {
+            "password": "P@lmTr33s123",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user19",
+            "first_name": "Ricardo",
+            "last_name": "Salazar",
+            "email": "ricardo.salazar@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:52:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 20,
+        "fields": {
+            "password": "H@ppy!H0liday",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user20",
+            "first_name": "Lorena",
+            "last_name": "Navarro",
+            "email": "lorena.navarro@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:53:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 21,
+        "fields": {
+            "password": "Gr33nL!ght",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user21",
+            "first_name": "Oscar",
+            "last_name": "Vásquez",
+            "email": "oscar.vasquez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:54:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 22,
+        "fields": {
+            "password": "C0ffeeMornings!",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user22",
+            "first_name": "Gabriela",
+            "last_name": "Montes",
+            "email": "gabriela.montes@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:55:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 23,
+        "fields": {
+            "password": "$uperM@n!2024",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user23",
+            "first_name": "Fernando",
+            "last_name": "Guerra",
+            "email": "fernando.guerra@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:56:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 24,
+        "fields": {
+            "password": "Winter!C0ld7",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user24",
+            "first_name": "Daniela",
+            "last_name": "Paredes",
+            "email": "daniela.paredes@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:57:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 25,
+        "fields": {
+            "password": "BlueSky@2024",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user25",
+            "first_name": "Mauricio",
+            "last_name": "Gómez",
+            "email": "mauricio.gomez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:58:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 26,
+        "fields": {
+            "password": "MyP@ssw0rd99",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user26",
+            "first_name": "Verónica",
+            "last_name": "Romero",
+            "email": "veronica.romero@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T15:59:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 27,
+        "fields": {
+            "password": "L0veSummer!21",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user27",
+            "first_name": "Esteban",
+            "last_name": "Castillo",
+            "email": "esteban.castillo@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T16:00:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 28,
+        "fields": {
+            "password": "Ch3ck3r$Game",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user28",
+            "first_name": "Camila",
+            "last_name": "Román",
+            "email": "camila.roman@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T16:01:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 29,
+        "fields": {
+            "password": "C@lmSe@Breez3",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user29",
+            "first_name": "Manuel",
+            "last_name": "Bermúdez",
+            "email": "manuel.bermudez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T16:02:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 30,
+        "fields": {
+            "password": "V1olinPlay$22",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "user30",
+            "first_name": "Patricio",
+            "last_name": "Márquez",
+            "email": "patricio.marquez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-21T16:03:00Z"
+        }
+    }
+
+    
+]

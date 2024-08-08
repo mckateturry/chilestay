@@ -1,0 +1,920 @@
+
+[
+    {
+        "model": "chilestay.inmueble",
+        "pk": 1,
+        "fields": {
+            "id": "1",
+            "nombre": "Hotel Vista Hermosa",
+            "arrendada": false,
+            "direccion": "Calle del Sol 456, Santiago, Chile",
+            "comuna": 1,
+            "region": 1,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "aire_acondicionado": true,
+                "zona_trabajo": true,
+                "cocina": true,
+                "calefaccion": true,
+                "televisor": true,
+                "piscina": true,
+                "gimnasio": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 2 1234 5678",
+            "correo_electronico": "contacto@vistahermosa.cl",
+            "pagina_web": "https://www.vistahermosa.cl",
+            "descripcion": "Hotel confortable con vistas panorámicas y servicios completos.",
+            "usuarios": [1]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 2,
+        "fields": {
+            "id": "2",
+            "nombre": "Cabañas La Montaña",
+            "arrendada": false,
+            "direccion": "Ruta 7, Km 50, Puerto Varas, Chile",
+            "comuna": 2,
+            "region": 2,
+            "tipo_inmueble": 3,
+            "servicios": {
+                "wifi": true,
+                "lavadora": true,
+                "chimenea": true,
+                "cocina": true,
+                "calefaccion": true,
+                "televisor": true,
+                "parrilla": true,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 65 234 567",
+            "correo_electronico": "reservas@cabanaslamontana.cl",
+            "pagina_web": "https://www.cabanaslamontana.cl",
+            "descripcion": "Cabañas acogedoras en un entorno natural ideal para la relajación.",
+            "usuarios": [2]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 3,
+        "fields": {
+            "id": "3",
+            "nombre": "Hostal El Refugio",
+            "arrendada": false,
+            "direccion": "Av. Los Pioneros 345, Punta Arenas, Chile",
+            "comuna": 3,
+            "region": 3,
+            "tipo_inmueble": 2,
+            "servicios": {
+                "wifi": true,
+                "secador_pelo": true,
+                "zona_trabajo": true,
+                "cocina": true,
+                "calefaccion": true,
+                "televisor": true,
+                "plancha": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 61 123 456",
+            "correo_electronico": "info@hostalelrefugio.cl",
+            "pagina_web": "https://www.hostalelrefugio.cl",
+            "descripcion": "Hostal cómodo y económico, ideal para viajeros y mochileros.",
+            "usuarios": [3]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 4,
+        "fields": {
+            "id": "4",
+            "nombre": "Residencial El Sol",
+            "arrendada": false,
+            "direccion": "Calle Luna 789, Valparaíso, Chile",
+            "comuna": 4,
+            "region": 4,
+            "tipo_inmueble": 6,
+            "servicios": {
+                "wifi": true,
+                "estacionamiento": true,
+                "televisor": true,
+                "desayuno_incluido": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 32 234 5678",
+            "correo_electronico": "info@residencialelsol.cl",
+            "pagina_web": "https://www.residencialelsol.cl",
+            "descripcion": "Residencial acogedora en el corazón de Valparaíso.",
+            "usuarios": [4]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 5,
+        "fields": {
+            "id": "5",
+            "nombre": "Casa de Campo Los Robles",
+            "arrendada": false,
+            "direccion": "Camino Los Robles s/n, Pucón, Chile",
+            "comuna": 5,
+            "region": 5,
+            "tipo_inmueble": 5,
+            "servicios": {
+                "wifi": true,
+                "cocina": true,
+                "chimenea": true,
+                "parrilla": true,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 45 678 9012",
+            "correo_electronico": "contacto@losrobles.cl",
+            "pagina_web": "https://www.losrobles.cl",
+            "descripcion": "Casa de campo ideal para disfrutar de la naturaleza en Pucón.",
+            "usuarios": [5]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 6,
+        "fields": {
+            "id": "6",
+            "nombre": "Hotel Mar y Sol",
+            "arrendada": false,
+            "direccion": "Av. Costanera 1234, Viña del Mar, Chile",
+            "comuna": 6,
+            "region": 6,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "piscina": true,
+                "gimnasio": true,
+                "aire_acondicionado": true,
+                "desayuno_incluido": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 32 123 4567",
+            "correo_electronico": "info@marysol.cl",
+            "pagina_web": "https://www.marysol.cl",
+            "descripcion": "Hotel con vistas al mar y servicios de lujo en Viña del Mar.",
+            "usuarios": [6]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 7,
+        "fields": {
+            "id": "7",
+            "nombre": "Hostal La Serena",
+            "arrendada": false,
+            "direccion": "Calle Central 567, La Serena, Chile",
+            "comuna": 7,
+            "region": 7,
+            "tipo_inmueble": 2,
+            "servicios": {
+                "wifi": true,
+                "zona_trabajo": true,
+                "cocina": true,
+                "calefaccion": true,
+                "televisor": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 51 234 5678",
+            "correo_electronico": "reservas@hostallaserena.cl",
+            "pagina_web": "https://www.hostallaserena.cl",
+            "descripcion": "Hostal cómodo y céntrico en La Serena, ideal para turistas.",
+            "usuarios": [7]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 8,
+        "fields": {
+            "id": "8",
+            "nombre": "Cabañas El Bosque",
+            "arrendada": false,
+            "direccion": "Camino El Bosque 123, Frutillar, Chile",
+            "comuna": 8,
+            "region": 8,
+            "tipo_inmueble": 3,
+            "servicios": {
+                "wifi": true,
+                "cocina": true,
+                "calefaccion": true,
+                "chimenea": true,
+                "parrilla": true,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 65 234 5678",
+            "correo_electronico": "info@cabanaselbque.cl",
+            "pagina_web": "https://www.cabanaselbque.cl",
+            "descripcion": "Cabañas rodeadas de naturaleza, perfectas para una escapada en Frutillar.",
+            "usuarios": [8]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 9,
+        "fields": {
+            "id": "9",
+            "nombre": "Hotel Andes",
+            "arrendada": false,
+            "direccion": "Calle Principal 456, San Pedro de Atacama, Chile",
+            "comuna": 9,
+            "region": 9,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "aire_acondicionado": true,
+                "piscina": true,
+                "gimnasio": true,
+                "desayuno_incluido": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 55 234 5678",
+            "correo_electronico": "info@hotelandes.cl",
+            "pagina_web": "https://www.hotelandes.cl",
+            "descripcion": "Hotel de lujo en el corazón de San Pedro de Atacama.",
+            "usuarios": [9]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 10,
+        "fields": {
+            "id": "10",
+            "nombre": "Hostal El Desierto",
+            "arrendada": false,
+            "direccion": "Av. Desierto 789, Antofagasta, Chile",
+            "comuna": 10,
+            "region": 10,
+            "tipo_inmueble": 2,
+            "servicios": {
+                "wifi": true,
+                "televisor": true,
+                "calefaccion": true,
+                "cocina": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 55 345 6789",
+            "correo_electronico": "info@hostaledesierto.cl",
+            "pagina_web": "https://www.hostaledesierto.cl",
+            "descripcion": "Hostal sencillo y cómodo en Antofagasta.",
+            "usuarios": [10]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 11,
+        "fields": {
+            "id": "11",
+            "nombre": "Hotel Patagonia",
+            "arrendada": false,
+            "direccion": "Calle Patagonia 234, Puerto Varas, Chile",
+            "comuna": 11,
+            "region": 11,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "desayuno_incluido": true,
+                "piscina": true,
+                "gimnasio": true,
+                "aire_acondicionado": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 65 678 9012",
+            "correo_electronico": "info@hotelpatagonia.cl",
+            "pagina_web": "https://www.hotelpatagonia.cl",
+            "descripcion": "Hotel elegante con vistas al lago en Puerto Varas.",
+            "usuarios": [11]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 12,
+        "fields": {
+            "id": "12",
+            "nombre": "Residencial El Mar",
+            "arrendada": false,
+            "direccion": "Av. Marítima 123, Iquique, Chile",
+            "comuna": 12,
+            "region": 12,
+            "tipo_inmueble": 6,
+            "servicios": {
+                "wifi": true,
+                "desayuno_incluido": true,
+                "televisor": true,
+                "aire_acondicionado": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 57 234 5678",
+            "correo_electronico": "info@residencialmar.cl",
+            "pagina_web": "https://www.residencialmar.cl",
+            "descripcion": "Residencial con excelente ubicación frente al mar en Iquique.",
+            "usuarios": [12]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 13,
+        "fields": {
+            "id": "13",
+            "nombre": "Hotel del Valle",
+            "arrendada": false,
+            "direccion": "Calle del Valle 789, Temuco, Chile",
+            "comuna": 13,
+            "region": 13,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "piscina": true,
+                "gimnasio": true,
+                "aire_acondicionado": true,
+                "desayuno_incluido": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 45 678 9012",
+            "correo_electronico": "reservas@hoteldelvalle.cl",
+            "pagina_web": "https://www.hoteldelvalle.cl",
+            "descripcion": "Hotel moderno con servicios completos en Temuco.",
+            "usuarios": [13]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 14,
+        "fields": {
+            "id": "14",
+            "nombre": "Cabañas Valle Nevado",
+            "arrendada": false,
+            "direccion": "Camino Valle Nevado 456, Santiago, Chile",
+            "comuna": 14,
+            "region": 14,
+            "tipo_inmueble": 3,
+            "servicios": {
+                "wifi": true,
+                "cocina": true,
+                "calefaccion": true,
+                "chimenea": true,
+                "parrilla": true,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 2 678 9012",
+            "correo_electronico": "reservas@cabanasvalle.cl",
+            "pagina_web": "https://www.cabanasvalle.cl",
+            "descripcion": "Cabañas en la montaña con acceso a estaciones de esquí.",
+            "usuarios": [14]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 15,
+        "fields": {
+            "id": "15",
+            "nombre": "Hostal Central",
+            "arrendada": false,
+            "direccion": "Calle Central 456, Santiago, Chile",
+            "comuna": 15,
+            "region": 15,
+            "tipo_inmueble": 2,
+            "servicios": {
+                "wifi": true,
+                "zona_trabajo": true,
+                "cocina": true,
+                "calefaccion": true,
+                "televisor": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 2 345 6789",
+            "correo_electronico": "info@hostalcentral.cl",
+            "pagina_web": "https://www.hostalcentral.cl",
+            "descripcion": "Hostal con excelente ubicación en el centro de Santiago.",
+            "usuarios": [15]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 16,
+        "fields": {
+            "id": "16",
+            "nombre": "Hotel Bella Vista",
+            "arrendada": false,
+            "direccion": "Av. Bella Vista 789, Santiago, Chile",
+            "comuna": 1,
+            "region": 1,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "aire_acondicionado": true,
+                "zona_trabajo": true,
+                "cocina": false,
+                "calefaccion": true,
+                "televisor": true,
+                "piscina": true,
+                "gimnasio": false
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 2 6789 1234",
+            "correo_electronico": "contacto@bellavista.cl",
+            "pagina_web": "https://www.bellavista.cl",
+            "descripcion": "Hotel moderno en el centro de Santiago con vistas impresionantes.",
+            "usuarios": [16]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 17,
+        "fields": {
+            "id": "17",
+            "nombre": "Cabañas Los Pinos",
+            "arrendada": false,
+            "direccion": "Camino Los Pinos 567, Pucón, Chile",
+            "comuna": 5,
+            "region": 5,
+            "tipo_inmueble": 3,
+            "servicios": {
+                "wifi": true,
+                "lavadora": true,
+                "chimenea": true,
+                "cocina": true,
+                "calefaccion": true,
+                "televisor": true,
+                "parrilla": true,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 45 678 1234",
+            "correo_electronico": "contacto@cabanaslopinos.cl",
+            "pagina_web": "https://www.cabanaslopinos.cl",
+            "descripcion": "Cabañas equipadas y acogedoras en un entorno natural.",
+            "usuarios": [17]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 18,
+        "fields": {
+            "id": "18",
+            "nombre": "Hostal Las Palmas",
+            "arrendada": false,
+            "direccion": "Calle Las Palmas 234, Antofagasta, Chile",
+            "comuna": 10,
+            "region": 10,
+            "tipo_inmueble": 2,
+            "servicios": {
+                "wifi": true,
+                "secador_pelo": true,
+                "zona_trabajo": true,
+                "cocina": false,
+                "calefaccion": true,
+                "televisor": true,
+                "plancha": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 55 678 1234",
+            "correo_electronico": "info@hostallaspalmas.cl",
+            "pagina_web": "https://www.hostallaspalmas.cl",
+            "descripcion": "Hostal económico con buena ubicación y servicios básicos.",
+            "usuarios": [18]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 19,
+        "fields": {
+            "id": "19",
+            "nombre": "Residencial Los Andes",
+            "arrendada": false,
+            "direccion": "Av. Los Andes 567, Valparaíso, Chile",
+            "comuna": 4,
+            "region": 4,
+            "tipo_inmueble": 6,
+            "servicios": {
+                "wifi": true,
+                "estacionamiento": true,
+                "televisor": true,
+                "desayuno_incluido": true,
+                "calefaccion": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 32 678 9012",
+            "correo_electronico": "info@residenciallosandes.cl",
+            "pagina_web": "https://www.residenciallosandes.cl",
+            "descripcion": "Residencial con desayuno incluido y buena ubicación en Valparaíso.",
+            "usuarios": [19]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 20,
+        "fields": {
+            "id": "20",
+            "nombre": "Casa Rural El Cielo",
+            "arrendada": false,
+            "direccion": "Camino El Cielo 123, San Pedro de Atacama, Chile",
+            "comuna": 9,
+            "region": 9,
+            "tipo_inmueble": 5,
+            "servicios": {
+                "wifi": true,
+                "cocina": true,
+                "chimenea": true,
+                "parrilla": true,
+                "estacionamiento": true,
+                "calefaccion": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 55 678 9012",
+            "correo_electronico": "contacto@casaruralelcielo.cl",
+            "pagina_web": "https://www.casaruralelcielo.cl",
+            "descripcion": "Casa rural con todas las comodidades necesarias para una estadía placentera.",
+            "usuarios": [20]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 21,
+        "fields": {
+            "id": "21",
+            "nombre": "Hotel La Costa",
+            "arrendada": false,
+            "direccion": "Av. Costa 345, Viña del Mar, Chile",
+            "comuna": 6,
+            "region": 6,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "piscina": true,
+                "gimnasio": true,
+                "aire_acondicionado": true,
+                "desayuno_incluido": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 32 123 4567",
+            "correo_electronico": "reservas@hotellacosta.cl",
+            "pagina_web": "https://www.hotellacosta.cl",
+            "descripcion": "Hotel lujoso con vista al mar en Viña del Mar.",
+            "usuarios": [21]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 22,
+        "fields": {
+            "id": "22",
+            "nombre": "Hostal Rutas del Sur",
+            "arrendada": false,
+            "direccion": "Calle Rutas 123, Temuco, Chile",
+            "comuna": 13,
+            "region": 13,
+            "tipo_inmueble": 2,
+            "servicios": {
+                "wifi": true,
+                "zona_trabajo": true,
+                "cocina": true,
+                "calefaccion": true,
+                "televisor": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 45 123 4567",
+            "correo_electronico": "info@hostalrutasdelsur.cl",
+            "pagina_web": "https://www.hostalrutasdelsur.cl",
+            "descripcion": "Hostal con servicios básicos y excelente ubicación en Temuco.",
+            "usuarios": [22]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 23,
+        "fields": {
+            "id": "23",
+            "nombre": "Cabañas El Jardín",
+            "arrendada": false,
+            "direccion": "Camino El Jardín 567, Frutillar, Chile",
+            "comuna": 8,
+            "region": 8,
+            "tipo_inmueble": 3,
+            "servicios": {
+                "wifi": true,
+                "calefaccion": true,
+                "cocina": true,
+                "chimenea": true,
+                "parrilla": true,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 65 678 1234",
+            "correo_electronico": "contacto@cabanaseljardin.cl",
+            "pagina_web": "https://www.cabanaseljardin.cl",
+            "descripcion": "Cabañas con amplios jardines y todas las comodidades en Frutillar.",
+            "usuarios": [23]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 24,
+        "fields": {
+            "id": "24",
+            "nombre": "Hotel El Descanso",
+            "arrendada": false,
+            "direccion": "Av. Descanso 345, Chillán, Chile",
+            "comuna": 11,
+            "region": 11,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "aire_acondicionado": true,
+                "desayuno_incluido": true,
+                "piscina": true,
+                "gimnasio": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": false
+            },
+            "telefono": "+56 42 345 6789",
+            "correo_electronico": "reservas@hoteledescanso.cl",
+            "pagina_web": "https://www.hoteledescanso.cl",
+            "descripcion": "Hotel con excelentes servicios y ubicación en Chillán.",
+            "usuarios": [24]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 25,
+        "fields": {
+            "id": "25",
+            "nombre": "Residencial La Montaña",
+            "arrendada": false,
+            "direccion": "Calle Montaña 456, La Serena, Chile",
+            "comuna": 7,
+            "region": 7,
+            "tipo_inmueble": 6,
+            "servicios": {
+                "wifi": true,
+                "calefaccion": true,
+                "televisor": true,
+                "desayuno_incluido": false,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 51 123 4567",
+            "correo_electronico": "info@residenciallamontana.cl",
+            "pagina_web": "https://www.residenciallamontana.cl",
+            "descripcion": "Residencial acogedora con buena ubicación en La Serena.",
+            "usuarios": [25]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 26,
+        "fields": {
+            "id": "26",
+            "nombre": "Casa en el Lago",
+            "arrendada": false,
+            "direccion": "Av. Lago 789, Puerto Varas, Chile",
+            "comuna": 12,
+            "region": 12,
+            "tipo_inmueble": 5,
+            "servicios": {
+                "wifi": true,
+                "cocina": true,
+                "chimenea": true,
+                "parrilla": true,
+                "estacionamiento": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 65 123 4567",
+            "correo_electronico": "contacto@casaenellago.cl",
+            "pagina_web": "https://www.casaenellago.cl",
+            "descripcion": "Casa con vista al lago y todas las comodidades necesarias en Puerto Varas.",
+            "usuarios": [26]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 27,
+        "fields": {
+            "id": "27",
+            "nombre": "Cabañas La Esperanza",
+            "arrendada": false,
+            "direccion": "Camino La Esperanza 123, Coyhaique, Chile",
+            "comuna": 14,
+            "region": 14,
+            "tipo_inmueble": 3,
+            "servicios": {
+                "wifi": true,
+                "calefaccion": true,
+                "cocina": true,
+                "chimenea": true,
+                "parrilla": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 67 678 1234",
+            "correo_electronico": "contacto@cabanaslaesperanza.cl",
+            "pagina_web": "https://www.cabanaslaesperanza.cl",
+            "descripcion": "Cabañas acogedoras en un entorno natural en Coyhaique.",
+            "usuarios": [27]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 28,
+        "fields": {
+            "id": "28",
+            "nombre": "Hotel y Spa Relajación",
+            "arrendada": false,
+            "direccion": "Av. Relax 789, Santiago, Chile",
+            "comuna": 1,
+            "region": 1,
+            "tipo_inmueble": 1,
+            "servicios": {
+                "wifi": true,
+                "aire_acondicionado": true,
+                "spa": true,
+                "gimnasio": true,
+                "piscina": true,
+                "desayuno_incluido": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": false,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 2 345 6789",
+            "correo_electronico": "reservas@hotelysparelajacion.cl",
+            "pagina_web": "https://www.hotelysparelajacion.cl",
+            "descripcion": "Hotel con spa y excelentes instalaciones para el relax en Santiago.",
+            "usuarios": [28]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 29,
+        "fields": {
+            "id": "29",
+            "nombre": "Residencial El Sol",
+            "arrendada": false,
+            "direccion": "Calle Sol 567, Iquique, Chile",
+            "comuna": 15,
+            "region": 15,
+            "tipo_inmueble": 6,
+            "servicios": {
+                "wifi": true,
+                "calefaccion": true,
+                "televisor": true,
+                "desayuno_incluido": false
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": false,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 57 123 4567",
+            "correo_electronico": "info@residencialelsol.cl",
+            "pagina_web": "https://www.residencialelsol.cl",
+            "descripcion": "Residencial con buena ubicación y servicios básicos en Iquique.",
+            "usuarios": [29]
+        }
+    },
+    {
+        "model": "chilestay.inmueble",
+        "pk": 30,
+        "fields": {
+            "id": "30",
+            "nombre": "Cabañas Lago Verde",
+            "arrendada": false,
+            "direccion": "Calle Lago Verde 123, Aysén, Chile",
+            "comuna": 16,
+            "region": 16,
+            "tipo_inmueble": 3,
+            "servicios": {
+                "wifi": true,
+                "calefaccion": true,
+                "cocina": true,
+                "chimenea": true,
+                "parrilla": true
+            },
+            "calificacion_sernatur": {
+                "sello_calidad": true,
+                "sello_sustentabilidad": true,
+                "compromiso_practicas": true
+            },
+            "telefono": "+56 67 123 4567",
+            "correo_electronico": "contacto@cabanaslagoverde.cl",
+            "pagina_web": "https://www.cabanaslagoverde.cl",
+            "descripcion": "Cabañas con vista al lago y equipadas para una estancia confortable en Aysén.",
+            "usuarios": [30]
+        }
+    }
+]

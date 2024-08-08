@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmuebles Disponibles</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" 
+            integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function filtrarComunas(regionId) {
+            if (!regionId) {
+                document.getElementById('comuna').innerHTML = '<option value="">Todas las comunas</option>';
+                return;
+            }
+
+            axios.post('/filtrar-comunas/', { regionId: regionId })
+                .then(response => {
+                    if (response.data.status === 200) {
+                        const comunas = response.data.data;
+                        let options = '<option value="">Todas las comunas</option>';
+                        comunas.forEach(comuna => {
+                            options += `<option value="${comuna.id}">${comuna.name}</option>`;
+                        });
+                        document.getElementById('comuna').innerHTML = options;
+                    } else {
+                        console.error('Error:', response.data);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al filtrar comunas:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container my-4">
+        <h2>Inmuebles Disponibles</h2>
+        <form method="GET" class="mb-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="region">Región</label>
+                    <select name="region" id="region" class="form-control" onchange="filtrarComunas(this.value)">
+                        <option value="">Todas las regiones</option>
+                        {% for region in regiones %}
+                        <option value="{{ region.id }}" {% if request.GET.region == region.id|stringformat:'s' %}selected{% endif %}>{{ region.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="comuna">Comuna</label>
+                    <select name="comuna" id="comuna" class="form-control">
+                        <option value="">Todas las comunas</option>
+                        {% for comuna in comunas %}
+                        <option value="{{ comuna.id }}" {% if request.GET.comuna == comuna.id|stringformat:'s' %}selected{% endif %}>{{ comuna.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary mt-4">Filtrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+{% endblock %}

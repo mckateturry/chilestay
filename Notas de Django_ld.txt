@@ -1,0 +1,240 @@
+Paso 1: Hay que crear un entorno viertual para TRABAJAR CON DISTINTAS VERSIONES de django 
+    ====================CREAR ENTORNO VIRTUAL====================
+        crear entorno virtual ➔ python -m venv vdjango
+
+         ➔ python -m venv => Da la instrucción de creación de un entorno virtual, venv significa
+        Virtual Envioronment
+
+        ➔ vdjango => Es el nombre del entorno virtual
+    =============================================================
+
+Paso 2: Hay que inicializar el entorno virtual, no me acuerdo si tenemos que entrar a la carpeta o no
+    ====================ACTIVACION Y DESACTIVACION DE ENTORNO VIRTUAL====================
+     activar entorno virtual  ➔ source vdjango/Scripts/activate ➔ funchiona en bash
+
+     sale de el entorno virtual ➔ deactivate
+    =====================================================================================
+
+Paso 3: Preparar entorno virtual INSTALADO LO REQUERIDO
+    ====================COMPROBACIONES Y INSTALACION DE MODULOS====================
+    pip list ➔ ver las dependencias instaladas en el entorno
+
+    pip install django
+    ===============================================================================
+
+Paso 4: Crear un proyecto para poder trabajar con el
+    ====================CREACION DE PROYECTO====================
+    django-admin startproject myFirstApp ➔ crea el proyecto "myFirstApp" es el nombre del proyecto
+    ============================================================
+
+Paso 5: Crear nuestras APP que requirimos
+    ====================CREACION DE APLICACIONES====================
+    creacion de proyecto ➔ python manage.py startapp login
+    ================================================================
+
+Paso 6: Ejecutar un servidor para poder interactuarl con la app, siempre va al final
+    ====================CORRER EL PROYECTO====================
+    cd myFirstApp ➔ acceder a la carpeta del proyecto
+
+    correr le proyecto ➔ python manage.py runserver
+    ==========================================================
+
+Otros pasos a seguir seria vincular la APP en setting.py por que si no dara error
+    ====================VINCULANDO APLICACION AL ARCHIVO SETTING.PY====================
+        INSTALLED_APPS = [
+        '<Nombre de la aplicacion>',
+        ]
+    ===================================================================================
+
+Podemos crear un txt para poder dejar documentado o listado las dependencias que tenemos instalados en el proyecto, despues de instalar todo pero TODO se hace esto
+    ====================CREAR E INSTALAR UN TXT CON LAS DEPENDECIAS====================
+    crear un txt con las dependencias del proyecto ➔ pip freeze > requirements.txt
+
+    instalar las dependencias del proyecto ➔ pip install -r requirements.txt
+    ===================================================================================
+
+Podemos crar, editar, etc usando el super usuario
+    ====================CREAR EL SUPER USUARIO===================
+        creaicon del super usuario ➔ python manage.py createsuperuser
+    =============================================================
+
+Crea el archivo de base de datos
+    ====================CREAR LA BASE DE DATOS===================
+        python manage.py makemigrations 
+    =============================================================
+
+Resetiar la informacion 
+    ====================RESETEAR LA INFORMACION===================
+        python manage.py migrate  
+    ==============================================================
+    
+    python manage.py runserver
+
+
+
+TORPEO DEL EDI
+# Crear un entorno virtual
+python -m venv onlyflans
+onlyflan\Scripts\activate
+python --version
+pip install django
+pip freeze > requirements.txt
+django-admin startproject onlyflans
+cd onlyflans
+python manage.py migrate
+python manage.py runserver
+
+model > viEs > html > settings > urls
+
+model: base de datos
+
+views: parte lógica
+
+html: template como se muestra
+
+setting: es opcional añadir app
+
+urls: setear la url y el nombre
+
+
+Puede ir dentro de web o afuera la carpeta static
+
+
+
+
+
+
+
+
+
+[
+{
+  "model": "chilestay.region",
+  "pk": 1,
+  "fields": {
+    "name": "Arica y Parinacota",
+    "pais": 1
+  }
+},
+{
+  "model": "chilestay.region",
+  "pk": 2,
+  "fields": {
+    "name": "Tarapacß",
+    "pais": 1
+  }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Antofagasta",
+      "pais": 1
+    }
+  },
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Atacama",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Coquimbo",
+      "pais": 1
+    }
+  },
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Valparaíso",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Metropolitana de Santiago",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Libertador Gral. Bernardo O’Higgins",
+      "pais": 1
+    }
+  },
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Maule",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Ñuble",
+      "pais": 1
+    }
+  },
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Biobío",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Araucanía",
+      "pais": 1
+    }
+  },
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Los Ríos",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Los Lagos",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Aysén",
+      "pais": 1
+    }
+},
+{
+    "model": "chilestay.region",
+    "fields": {
+      "name": "Magallanes y de la Antártica Chilena",
+      "pais": 1
+    }
+}
+
+]
+
+
+
+
+
+
+
+echo "# chilestay" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mckateturry/chilestay.git
+git push -u origin main

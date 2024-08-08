@@ -1,0 +1,44 @@
+[
+    {
+        "model": "chilestay.tipoinmueble",
+        "pk": 1,
+        "fields": {
+            "nombre": "Hotel"
+        }
+    },
+    {
+        "model": "chilestay.tipoinmueble",
+        "pk": 2,
+        "fields": {
+            "nombre": "Hostal"
+        }
+    },
+    {
+        "model": "chilestay.tipoinmueble",
+        "pk": 3,
+        "fields": {
+            "nombre": "Cabaña"
+        }
+    },
+    {
+        "model": "chilestay.tipoinmueble",
+        "pk": 4,
+        "fields": {
+            "nombre": "Departamento"
+        }
+    },
+    {
+        "model": "chilestay.tipoinmueble",
+        "pk": 5,
+        "fields": {
+            "nombre": "Casa"
+        }
+    },
+    {
+        "model": "chilestay.tipoinmueble",
+        "pk": 6,
+        "fields": {
+            "nombre": "Otro"
+        }
+    }
+]

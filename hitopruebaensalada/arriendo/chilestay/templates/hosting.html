@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <!--FRASE1-->
+ <div class="py-5 px-5">
+    <h2 class="slideRight text-center">Nos encanta volver a verte, {{ user.username }}</h2>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="regions">Regiones</label>
+            <select class="form-control" name="regions" id="regions" onchange="filtrarComunas(this.value)">
+                <option value="">Seleccione</option> 
+                {% for region in regiones %}
+                <option value="{{ region.id }}">{{ region.nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="comunas">Comunas</label>
+            <select class="form-control" name="comunas" id="comunas">
+                <option value="">Seleccione</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

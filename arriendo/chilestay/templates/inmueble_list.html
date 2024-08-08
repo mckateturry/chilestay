@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center">Lista de Inmuebles</h2>
+    <div class="row">
+        {% for inmueble in inmuebles %}
+        <div class="col-md-4 mb-4">
+            <div class="card inmueble-card">
+                {% if inmueble.foto %}
+                <img src="{{ inmueble.foto.url }}" class="card-img-top" alt="Imagen de {{ inmueble.nombre }}">
+                {% else %}
+                <img src="{% static 'assets/img/default_image.jpg' %}" class="card-img-top" alt="Imagen por defecto">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                    <p class="card-text">{{ inmueble.descripcion }}</p>
+                    <a href="{% url 'inmueble_detail' inmueble.id %}" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Lista de Inmuebles</h2>
+    <div class="row">
+        {% for inmueble in inmuebles %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                {% if inmueble.foto %}
+                <img src="{{ inmueble.foto.url }}" class="card-img-top" alt="Foto de {{ inmueble.nombre }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                    <p class="card-text"><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+                    <p class="card-text"><strong>Comuna:</strong> {{ inmueble.comuna }}</p>
+                    <p class="card-text"><strong>Región:</strong> {{ inmueble.region }}</p>
+                    <p class="card-text"><strong>Tipo:</strong> {{ inmueble.tipo_inmueble }}</p>
+                    <p class="card-text"><strong>Capacidad:</strong> {{ inmueble.capacidad_adultos }} adultos</p>
+                    <p class="card-text"><strong>Fecha Disponible Desde:</strong> {{ inmueble.fecha_disponible_desde }}</p>
+                    <p class="card-text"><strong>Fecha Disponible Hasta:</strong> {{ inmueble.fecha_disponible_hasta }}</p>
+                    <a href="{% url 'inmueble_detail' inmueble.id %}" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Lista de Inmuebles</h2>
+    <div class="row">
+        {% for inmueble in inmuebles %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                    <p class="card-text"><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+                    <p class="card-text"><strong>Comuna:</strong> {{ inmueble.comuna }}</p>
+                    <p class="card-text"><strong>Región:</strong> {{ inmueble.region }}</p>
+                    <p class="card-text"><strong>Tipo:</strong> {{ inmueble.tipo_inmueble }}</p>
+                    <p class="card-text"><strong>Capacidad:</strong> {{ inmueble.capacidad_adultos }} adultos</p>
+                    <p class="card-text"><strong>Fecha Disponible Desde:</strong> {{ inmueble.fecha_disponible_desde }}</p>
+                    <p class="card-text"><strong>Fecha Disponible Hasta:</strong> {{ inmueble.fecha_disponible_hasta }}</p>
+                    <a href="{% url 'inmueble_detail' inmueble.id %}" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} {% endcomment %}
